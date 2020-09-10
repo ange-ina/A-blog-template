@@ -1,0 +1,42 @@
+<%-include('./partials/head')%>
+<body>
+    <%-include('./partials/navigation')%>
+    <section id="new">
+        <h2><%= data.title %></h2>
+        <form action="/new" method="POST">
+            <input type="text" name="title" id="" placeholder="Title">
+          
+            <input type="text" name="urlPicture" id="" placeholder="URL Picture">
+          
+            <input type="text" name="author" id="" placeholder="author">
+         
+            <input type="text" name="authorPicture" id="" placeholder="Author Picture">
+         
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Write your article here..."></textarea>
+         
+            <input type="submit" value="Send Article">
+        </form>
+    </section>
+   
+    <section class="eye">
+        <img src="/eye.png" width="40px" alt="">
+        <h3>What to read next</h3>
+    </section>
+    <section>
+       
+        <%data.forEach(elt=>{%>
+        <div>
+         
+            <img src="<%=elt.url%>" alt="">
+          
+            <h2><%=elt.title%></h2>
+           
+      
+           
+        </div>
+      
+        <%})%>
+    </section>
+       
+
+<%- include('./partials/footer')%>

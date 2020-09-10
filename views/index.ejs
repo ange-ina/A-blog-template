@@ -1,0 +1,26 @@
+<%-include('./partials/head')%>
+<body>
+    <%-include('./partials/navigation')%>
+    <header>
+        <!-- <%-include('./partials/title')%> -->
+    </header>
+    <section >
+       
+        <%data.forEach(elt=>{%>
+        <div>
+         
+            <a href="/post/<%=elt.id%>"> <img src="<%=elt.url%>" alt=""></a>
+           
+          
+            <h2><%=elt.title%></h2>
+           
+      
+           
+        </div>
+      
+        <%})%>
+       
+       
+    </section>
+</body>
+<%- include('./partials/footer')%>
