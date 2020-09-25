@@ -19,23 +19,23 @@
     
 
 </section>
-<!-- <section class="eye">
+<section class="eye">
     <img src="/eye.png" alt="">
     <h3>What to read next</h3>
 </section>
 <section class="three">
     <% data.forEach(elt=>{ %>
-    <% if(elt.id!=id){ %>
+
     <article>
-        <a href="/article/<%= elt.id %> "></a>
+        <a href="/post/<%= elt.id %> "></a>
         <img src="<%= elt.url %> " alt="">
         <h2><%= elt.title %> </h2>
     </article>
-    <% } %>
+    
     <% }) %>
 </section>
-</main>
-</body> -->
+
+</body>
 
 <%- include('./partials/footer')%>
 
